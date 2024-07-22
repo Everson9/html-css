@@ -10,14 +10,29 @@
         font-family: Arial, Helvetica, sans-serif;
     }
 
+
+
     table{
         width: 600px;
         border-collapse: collapse;
     }
 
+    caption{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+
+        background-color: lightgrey;
+
+    }
+
     thead, tfoot{
         background-color: gray;
         color: white;
+    }
+
+    tbody > tr:nth-child(2n){
+        background-color: lightpink;
     }
     
     td, th{
@@ -33,10 +48,13 @@
 <body>
     <h1>Tabelas grandes</h1>
     <table>
+        <caption>
+            População das Unidades  Federativas
+        </caption>
         <thead>
                 <tr>
-                    <th>Estado </th>
-                    <th>População</th>
+                    <th scope="col">Estado </th>
+                    <th scope="col">População</th>
                 </tr>
         </thead>
         <tbody>
@@ -84,7 +102,7 @@
 
         </tbody>
         <tfoot>
-                <th>Total de habitantes</th>
+                <th  scope="row">Total de habitantes</th>
                 <td class="população"><strong>144 956 175</strong></td>
         </tfoot>
     </table>
